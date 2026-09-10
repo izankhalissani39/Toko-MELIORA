@@ -3,7 +3,8 @@ import React, { useState, useMemo } from 'react';
 import { TrendingUp, DollarSign, ShoppingBag, CreditCard, Download, PieChart, BarChart3, Package, ArrowUpRight } from 'lucide-react';
 import { formatRupiah, formatNumber } from '../utils/formatters.js';
 export const SalesReport = ({ transactions, products }) => {
-    const [timeFilter, setTimeFilter] = useState('all');
+    const [timeFilter, setTimeFilter] = useState('today');
+    const [startDate, setStartDate] =('');
     // Filter transactions by selected timeframe
     const filteredTransactions = useMemo(() => {
         const now = new Date();
